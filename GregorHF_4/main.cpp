@@ -89,7 +89,7 @@ public:
 
 int SajatCeg::mennyiIdosebb(int _kor) const {
     int darab=0;
-    for (int i = 0; i < aktualisdarab(); ++i) {
+    for (unsigned int i = 0; i < aktualisdarab(); ++i) {
         if (leker(i).getEletkor()>_kor){
             darab++;
         }
@@ -98,7 +98,7 @@ int SajatCeg::mennyiIdosebb(int _kor) const {
 }
 
 void SajatCeg::tobbetKeresoketListaz(int _fizu) const {
-    for (int i = 0; i < aktualisdarab(); ++i) {
+    for (unsigned int i = 0; i < aktualisdarab(); ++i) {
         if (leker(i).getFizetes()>_fizu){
             cout<<leker(i).getEletkor()<<" "<<leker(i).getFizetes()<<endl;
         }

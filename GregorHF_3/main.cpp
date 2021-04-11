@@ -56,7 +56,7 @@ Tarolo::Tarolo(unsigned int _meret):meret(_meret) {
 }
 
 Tarolo::~Tarolo() {
-    for (int i = 0; i < meret; ++i) {
+    for (unsigned int i = 0; i < meret; ++i) {
         delete(kocsitomb[i]);
     }
 }
@@ -66,7 +66,7 @@ void Tarolo::ujkocsi(Szemelyauto *mutato, unsigned int index) {
 }
 
 void Tarolo::dragabbMint(int ar) const {
-    for (int i = 0; i < meret; ++i) {
+    for (unsigned int i = 0; i < meret; ++i) {
         if (kocsitomb[i]->getVetelar()>ar){
             cout<<kocsitomb[i]->getGyarto()<<" "<<kocsitomb[i]->getVetelar()<<" "<<kocsitomb[i]->getEvjarat()<<endl;
         }
@@ -75,7 +75,7 @@ void Tarolo::dragabbMint(int ar) const {
 
 int Tarolo::tipusSzamol(const string &keresett) const {
     int darab = 0;
-    for (int i = 0; i < meret; ++i) {
+    for (unsigned int i = 0; i < meret; ++i) {
         if (kocsitomb[i]->getGyarto()==keresett){
             darab++;
         }

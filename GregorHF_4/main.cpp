@@ -85,12 +85,13 @@ void Ceg::beallit(const Munkas &adat, unsigned index){
 
 class SajatCeg:public Ceg{
 public:
+    void beallit(const Munkas &adat, unsigned index);
     int mennyiIdosebb(int _kor) const;
     void tobbetKeresoketListaz(int _fizu) const;
 };
 
 int SajatCeg::mennyiIdosebb(int _kor) const {
-    int darab;
+    int darab=0;
     for (int i = 0; i < aktualisdarab(); ++i) {
         if (leker(i).getEletkor()>_kor){
             darab++;
@@ -105,6 +106,15 @@ void SajatCeg::tobbetKeresoketListaz(int _fizu) const {
             leker(i).kiir();
         }
     }
+}
+
+void SajatCeg::beallit(const Munkas &adat, unsigned int index) {
+    if(index<aktualisdarab()){Ceg::beallit(adat,index);}
+    else{
+        kibovit(index-aktualisdarab()+1);
+        Ceg::beallit(adat,index);
+    }
+
 }
 
 /*##SOLUTION##*/

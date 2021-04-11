@@ -35,9 +35,6 @@ int Szemelyauto::getEvjarat() const{
     return evjarat;
 }
 
-void Szemelyauto::kiir() const {
-    cout<<getGyarto()<<" "<<getVetelar()<<" "<<getEvjarat()<<endl;
-}
 
 class Tarolo
 {
@@ -51,13 +48,17 @@ public:
     int tipusSzamol(const string & keresett) const;
 };
 
+
+
+/*##SOLUTION##*/
+// Ide kerul a valasz!
 Tarolo::Tarolo(unsigned int _meret):meret(_meret) {
     kocsitomb=(Szemelyauto**) malloc(meret*sizeof (Szemelyauto));
 }
 
 Tarolo::~Tarolo() {
     for (int i = 0; i < meret; ++i) {
-       delete(kocsitomb[i]);
+        delete(kocsitomb[i]);
     }
 }
 
@@ -68,7 +69,7 @@ void Tarolo::ujkocsi(Szemelyauto *mutato, unsigned int index) {
 void Tarolo::dragabbMint(int ar) const {
     for (int i = 0; i < meret; ++i) {
         if (kocsitomb[i]->getVetelar()>ar){
-            kocsitomb[i]->kiir();
+            cout<<kocsitomb[i]->getGyarto()<<" "<<kocsitomb[i]->getVetelar()<<" "<<kocsitomb[i]->getEvjarat()<<endl;
         }
     }
 }
@@ -82,9 +83,6 @@ int Tarolo::tipusSzamol(const string &keresett) const {
     }
     return darab;
 }
-
-/*##SOLUTION##*/
-// Ide kerul a valasz!
 /*##SOLUTION##*/
 
 int main()

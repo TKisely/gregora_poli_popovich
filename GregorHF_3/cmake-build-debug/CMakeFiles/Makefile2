@@ -63,10 +63,10 @@ RM = /Applications/apps/CLion/ch-0/211.6693.114/CLion.app/Contents/bin/cmake/mac
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tkisely/CLionProjects/Greg_HF_3
+CMAKE_SOURCE_DIR = /Users/tkisely/CLionProjects/gregora_poli_popovich/GregorHF_3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tkisely/CLionProjects/Greg_HF_3/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/tkisely/CLionProjects/gregora_poli_popovich/GregorHF_3/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/Greg_HF_3.dir/clean
 CMakeFiles/Greg_HF_3.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Greg_HF_3.dir/build.make CMakeFiles/Greg_HF_3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Greg_HF_3.dir/build.make CMakeFiles/Greg_HF_3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/tkisely/CLionProjects/Greg_HF_3/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Greg_HF_3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/tkisely/CLionProjects/gregora_poli_popovich/GregorHF_3/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Greg_HF_3"
 .PHONY : CMakeFiles/Greg_HF_3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Greg_HF_3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tkisely/CLionProjects/Greg_HF_3/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tkisely/CLionProjects/gregora_poli_popovich/GregorHF_3/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Greg_HF_3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tkisely/CLionProjects/Greg_HF_3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tkisely/CLionProjects/gregora_poli_popovich/GregorHF_3/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Greg_HF_3.dir/rule
 
 # Convenience name for target.

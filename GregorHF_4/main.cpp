@@ -9,7 +9,6 @@ public:
     Munkas(int _eletkor, int _fizetes);
     int getEletkor() const;
     int getFizetes() const;
-    void kiir() const;
 };
 
 Munkas::Munkas():
@@ -27,10 +26,6 @@ int Munkas::getEletkor() const{
 }
 int Munkas::getFizetes() const{
     return fizetes;
-}
-
-void Munkas::kiir() const {
-    cout<<getEletkor()<<" "<<getFizetes()<<endl;
 }
 
 class Ceg{
@@ -83,6 +78,8 @@ void Ceg::beallit(const Munkas &adat, unsigned index){
     if (index<darab) alkalmazottak[index]=adat;
 }
 
+/*##SOLUTION##*/
+// Ide kerul a valasz!
 class SajatCeg:public Ceg{
 public:
     void beallit(const Munkas &adat, unsigned index);
@@ -103,7 +100,7 @@ int SajatCeg::mennyiIdosebb(int _kor) const {
 void SajatCeg::tobbetKeresoketListaz(int _fizu) const {
     for (int i = 0; i < aktualisdarab(); ++i) {
         if (leker(i).getFizetes()>_fizu){
-            leker(i).kiir();
+            cout<<leker(i).getEletkor()<<" "<<leker(i).getFizetes()<<endl;
         }
     }
 }
@@ -116,9 +113,6 @@ void SajatCeg::beallit(const Munkas &adat, unsigned int index) {
     }
 
 }
-
-/*##SOLUTION##*/
-// Ide kerul a valasz!
 /*##SOLUTION##*/
 
 

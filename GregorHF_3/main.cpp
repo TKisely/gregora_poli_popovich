@@ -12,7 +12,6 @@ public:
     string getGyarto() const;
     int getVetelar() const;
     int getEvjarat() const;
-    void kiir() const;
 };
 
 Szemelyauto::Szemelyauto(const string & _gyarto, int _vetelar, int _evjarat):

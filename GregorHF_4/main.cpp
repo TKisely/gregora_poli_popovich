@@ -82,6 +82,7 @@ void Ceg::beallit(const Munkas &adat, unsigned index){
 // Ide kerul a valasz!
 class SajatCeg:public Ceg{
 public:
+    SajatCeg(unsigned _alapmeret=0): Ceg(_alapmeret){}
     void beallit(const Munkas &adat, unsigned index);
     int mennyiIdosebb(int _kor) const;
     void tobbetKeresoketListaz(int _fizu) const;

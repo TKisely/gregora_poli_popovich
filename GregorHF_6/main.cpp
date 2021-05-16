@@ -14,6 +14,7 @@ public:
     virtual unsigned csucsSzam() const=0;
     virtual double kerulet() const=0;
     virtual double teruletSzamit() const=0;
+    virtual ~Alak()=0;
 
     void adatokKiir(){
         cout<<"Kerulet: "<< roundToPlaces(kerulet(),2)<<
@@ -21,6 +22,8 @@ public:
     }
 
 };
+
+Alak::~Alak() {}
 /*##SOLUTION##*/
 
 class Tarolo{

@@ -9,17 +9,17 @@ class AdatHalmaz {
 public:
     T1* egyik_tomb;
     T2* masik_tomb;
-    int egyik_merete;
-    int masik_merete;
+    unsigned egyik_merete;
+    unsigned masik_merete;
 
     AdatHalmaz();
     ~AdatHalmaz();
     void uj(T1 adat);
     void uj(T2 adat);
-    int elsomeret(){return egyik_merete;}
-    int meret2(){return masik_merete;}
-    T1 leker1(int i);
-    T2 masodikleker(int i);
+    unsigned elsomeret(){return egyik_merete;}
+    unsigned meret2(){return masik_merete;}
+    T1 leker1(unsigned i);
+    T2 masodikleker(unsigned i);
 };
 
 template <typename T1, typename T2>
@@ -46,21 +46,21 @@ AdatHalmaz<T1,T2>::~AdatHalmaz(){
 }
 
 template <typename T1, typename T2>
-T1 AdatHalmaz<T1,T2>::leker1(int i) {
+T1 AdatHalmaz<T1,T2>::leker1(unsigned i) {
     return egyik_tomb[i];
 }
 
 template <typename T1, typename T2>
-T2 AdatHalmaz<T1,T2>::masodikleker(int i) {
+T2 AdatHalmaz<T1,T2>::masodikleker(unsigned i) {
     return masik_tomb[i];
 }
 
 template <typename T1, typename T2>
 void AdatHalmaz<T1,T2>::uj(T1 adat) {
     T1* temp;
-    int uj_meret=egyik_merete+1;
+    unsigned uj_meret=egyik_merete+1;
     temp=new T1[uj_meret];
-    for (int i = 0; i < egyik_merete; ++i) {
+    for (unsigned i = 0; i < egyik_merete; ++i) {
         temp[i]=egyik_tomb[i];
     }
     temp[egyik_merete]=adat;
@@ -72,9 +72,9 @@ void AdatHalmaz<T1,T2>::uj(T1 adat) {
 template <typename T1, typename T2>
 void AdatHalmaz<T1,T2>::uj(T2 adat) {
     T2* temp;
-    int uj_meret=masik_merete+1;
+    unsigned uj_meret=masik_merete+1;
     temp=new T2[uj_meret];
-    for (int i = 0; i < masik_merete; ++i) {
+    for (unsigned i = 0; i < masik_merete; ++i) {
         temp[i]=masik_tomb[i];
     }
     temp[masik_merete]=adat;
